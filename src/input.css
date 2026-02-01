@@ -2,6 +2,7 @@
 
 @theme {
   --font-pop: "Poppins", sans-serif;
+  --shadow-cShadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -10,4 +11,10 @@
 
 .flex {
   @apply flex items-center;
+}
+
+.bFour {
+  @apply before:content-[''] before:absolute before:-left-7 
+  before:top-1/2 before:-translate-y-1/2 before:w-[6px] before:h-[28px] 
+  before:bg-[#FF7527] before:rounded-full;
 }

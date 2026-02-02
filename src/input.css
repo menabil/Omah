@@ -14,7 +14,9 @@
 }
 
 .bFour {
-  @apply before:content-[''] before:absolute before:-left-7 
+  @apply w-2 h-7.5 bg-[#FF7527] rounded-[5px] absolute top-[15px] -left-1;
+
+  /* @apply before:content-[''] before:absolute before:-left-7 
   before:top-1/2 before:-translate-y-1/2 before:w-[6px] before:h-[28px] 
-  before:bg-[#FF7527] before:rounded-full;
+  before:bg-[#FF7527] before:rounded-full; */
 }

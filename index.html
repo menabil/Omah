@@ -20,10 +20,11 @@
   </head>
   <body class="font-pop">
     <!-- Navbar -->
-    <header class="py-12.5 bg-[#EEEDDE]">
-      <div class="flex justify-between container">
+    <header class="sm:py-12.5 py-5 bg-[#EEEDDE]">
+      <div class="flex justify-between container sm:px-0 px-4">
         <img src="images/logo.png" alt="" class="cursor-pointer" />
-        <ul class="flex gap-x-25">
+        <i class="fa-solid fa-bars sm:hidden!"></i>
+        <ul class="hidden sm:flex gap-x-25">
           <li
             class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"
           >
@@ -49,34 +50,34 @@
     </header>
     <!-- Navbar -->
     <!-- Banner -->
-    <section class="bg-[#EEEDDE] pb-30 pt-23">
+    <section class="bg-[#EEEDDE] sm:pb-30 sm:pt-23 pt-10 pb-10">
       <div class="container">
-        <div class="flex justify-between">
+        <div class="sm:flex justify-between">
           <div class="">
             <h1
-              class="font-semibold text-[56px] leading-[150%] w-[777px] text-[#203239]"
+              class="ml-3 sm:ml-0 font-semibold sm:text-[56px] text-4xl sm:leading-[150%] w-[320px] sm:w-[777px] text-[#203239]"
             >
               Temukan Hunian Keluarga Sesuai Keinginanmu
             </h1>
             <p
-              class="font-light text-base w-[544px] leading-[30px] text-[#203239]/55 pt-6 pb-[55px]"
+              class="ml-3 sm:ml-0 font-light text-base w-[320px] sm:w-[544px] leading-[30px] text-[#203239]/55 pt-6 sm:pb-[55px] pb-10"
             >
               Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
               lokasi yang strategis di kota anda dengan cara yang lebih mudah.
             </p>
-            <div class="flex gap-x-4">
+            <div class="sm:flex gap-x-4">
               <div
-                class="py-6 px-5 rounded-[15px] bg-white flex gap-x-5 w-[510px]"
+                class="mb-3 ml-3 sm:mb-0 sm:py-6 py-3 sm:px-5 px-3 sm:rounded-[15px] rounded-[6px] bg-white sm:flex sm:gap-x-3 items-baseline sm:w-[510px] w-[310px]"
               >
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot hidden! sm:block!"></i>
                 <input
                   type="text"
                   placeholder="Search location, properties, residental group"
-                  class="outline-none border-none w-[359px]"
+                  class="outline-none border-none sm:w-[359px] w-[280px]"
                 />
               </div>
               <button
-                class="py-6 px-10 rounded-[15px] bg-white text-[#203239]/55 cursor-pointer"
+                class="sm:py-6 py-3 sm:px-10 px-4 ml-3 sm:ml-0 rounded-[15px] bg-white text-[#203239]/55 cursor-pointer"
               >
                 Search
               </button>
@@ -89,17 +90,19 @@
       </div>
     </section>
     <!-- Banner -->
+
     <!-- About -->
     <section class="py-25">
       <div class="container">
-        <h3 class="font-semibold w-[533px] text-4xl leading-[150%] mb-[64px]">
+        <h3 class="font-semibold w-[533px] text-4xl leading-[150%] mb-16">
           Tahapan Pembelian Properti yang Mudah dan Cepat
         </h3>
         <div class="flex items-start! justify-between">
           <div
-            class="py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            class="py-5 relative pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
           >
-            <div class="relative flex justify-between bFour">
+            <div class="bFour"></div>
+            <div class="flex justify-between">
               <h6 class="font-medium text-[#203239] text-base">
                 Pilih Properti
               </h6>
@@ -117,9 +120,10 @@
             </p>
           </div>
           <div
-            class="py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
           >
-            <div class="relative flex justify-between bFour">
+            <div class="bFour"></div>
+            <div class="flex justify-between">
               <h6 class="font-medium text-[#203239] text-base">
                 Proses Booking
               </h6>
@@ -136,9 +140,10 @@
             </p>
           </div>
           <div
-            class="py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
           >
-            <div class="relative flex justify-between bFour">
+            <div class="bFour"></div>
+            <div class="flex justify-between">
               <h6 class="font-medium text-[#203239] text-base">
                 KPR dan Sertifikasi
               </h6>

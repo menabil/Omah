@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Omah</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS compiled file -->
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  </head>
+  <body class="font-pop bg-[#EEEDDE]">
+    <!-- Navbar (reuse same structure as index) -->
+    <header class="md:py-12.5 py-5 bg-[#EEEDDE]">
+      <div class="flex justify-between container md:px-0 px-4">
+        <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
+        <i class="fa-solid fa-bars md:hidden"></i>
+        <ul class="hidden md:flex gap-x-8">
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="index.html" class="block py-2">Home</a></li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="about.html" class="block py-2">About</a></li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="#" class="block py-2">Properties</a></li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="#" class="block py-2">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-12 md:py-20 container mx-auto">
+      <h1 class="text-4xl md:text-5xl font-semibold text-center text-[#203239] mb-8">About Omah</h1>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-base md:text-lg text-[#203239]/80 leading-relaxed mb-4">
+            Omah is a modern real‑estate platform that helps families find their perfect home. We combine a clean, responsive design with powerful search tools, allowing users to filter properties by location, price range, and amenities.
+          </p>
+          <p class="text-base md:text-lg text-[#203239]/80 leading-relaxed">
+            Our mission is to simplify the property‑buying journey, offering transparent information, easy navigation, and a smooth booking experience. Whether you are a first‑time buyer or looking to upgrade, Omah provides curated listings from trusted developers.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img src="images/bannerbg.png" alt="Omah banner" class="max-w-full h-auto rounded-lg shadow-cShadow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Team / Values (optional) -->
+    <section class="bg-[#EEEDDE] py-12 md:py-20">
+      <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center text-[#203239] mb-10">Our Values</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-white rounded-lg shadow-cShadow">
+            <i class="fa-solid fa-user-check text-4xl text-[#FF7527] mb-4"></i>
+            <h3 class="font-medium text-[#203239] mb-2">Transparency</h3>
+            <p class="text-sm text-[#203239]/70">Clear pricing and property details for confident decisions.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-cShadow">
+            <i class="fa-solid fa-heart text-4xl text-[#FF7527] mb-4"></i>
+            <h3 class="font-medium text-[#203239] mb-2">Customer Focus</h3>
+            <p class="text-sm text-[#203239]/70">Tailored recommendations to match each family’s needs.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-cShadow">
+            <i class="fa-solid fa-shield-halved text-4xl text-[#FF7527] mb-4"></i>
+            <h3 class="font-medium text-[#203239] mb-2">Trust & Safety</h3>
+            <p class="text-sm text-[#203239]/70">Verified listings and secure booking processes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (reuse simple version) -->
+    <footer class="py-8 bg-[#203239] text-white text-center">
+      <p class="text-sm">© 2026 Omah. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

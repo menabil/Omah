@@ -1,58 +1,300 @@
 <!doctype html>
-<html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact – Omah</title>
+    <title>Contact – OMAH</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <!-- Tailwind CSS compiled -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./src/output.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
   </head>
-  <body class="font-pop bg-[#EEEDDE]">
-    <!-- Navbar (reuse same structure as other pages) -->
-    <header class="md:py-12.5 py-5 bg-[#EEEDDE]">
-      <div class="flex justify-between container md:px-0 px-4">
-        <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
-        <i class="fa-solid fa-bars md:hidden"></i>
-        <ul class="hidden md:flex gap-x-8">
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="index.html" class="block py-2">Home</a></li>
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="about.html" class="block py-2">About</a></li>
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="properties.html" class="block py-2">Properties</a></li>
-          <li class="hover:border-b-4 duration-200 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="contact.html" class="block py-2">Contact</a></li>
+  <body class="font-pop bg-white">
+    <!-- Navbar -->
+    <header class="md:py-12.5 py-5 bg-[#EEEDDE] relative">
+      <div class="flex items-center justify-between container md:px-0 px-4">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
+        </a>
+        <i id="menu-btn" class="fa-solid fa-bars text-2xl text-[#203239] cursor-pointer" style="display:none"></i>
+        <ul class="hidden md:flex gap-x-10 items-center">
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="about.html">About</a>
+          </li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="properties.html">Properties</a>
+          </li>
+          <li class="border-b-4 border-[#F6762E] cursor-pointer text-base font-semibold">
+            <a href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
+      <!-- Mobile nav dropdown -->
+      <ul id="mobile-menu" class="hidden flex-col bg-[#EEEDDE] px-6 pb-4 gap-y-3 md:hidden">
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="index.html" class="block text-[#203239] font-medium text-base">Home</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="about.html" class="block text-[#203239] font-medium text-base">About</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="properties.html" class="block text-[#203239] font-medium text-base">Properties</a>
+        </li>
+        <li class="py-2">
+          <a href="contact.html" class="block text-[#FF7527] font-semibold text-base">Contact</a>
+        </li>
+      </ul>
     </header>
+    <!-- Navbar -->
 
-    <!-- Contact Section -->
-    <section class="py-12 md:py-20 container mx-auto">
-      <h1 class="text-4xl md:text-5xl font-semibold text-center text-[#203239] mb-10">Contact Us</h1>
-      <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-cShadow p-8">
-        <form>
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="name">Name</label>
-            <input type="text" id="name" placeholder="Your name" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#FF7527]" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="email">Email</label>
-            <input type="email" id="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#FF7527]" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Your message" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#FF7527]"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-[#FF7527] text-white py-3 rounded-md hover:bg-[#e66b23] transition">Send Message</button>
-        </form>
+    <!-- Page Hero -->
+    <section class="bg-[#EEEDDE] py-14 md:py-20">
+      <div class="container px-4 md:px-0 text-center">
+        <p class="text-base text-[#FF7527] font-medium mb-2">Kami Siap Membantu</p>
+        <h1 class="font-semibold text-3xl md:text-5xl text-[#203239] leading-[130%] md:leading-[150%]">
+          Hubungi Kami
+        </h1>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-[#203239] text-white text-center">
-      <p class="text-sm">© 2026 Omah. All rights reserved.</p>
-    </footer>
+    <!-- Contact Info + Form -->
+    <section class="py-12 md:py-20">
+      <div class="container px-4 md:px-0">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#203239] mb-6">
+              Informasi Kontak
+            </h2>
+            <p class="text-sm md:text-base text-[#203239]/70 leading-7.5 mb-8">
+              Tim kami siap membantu Anda menemukan properti impian. Jangan
+              ragu untuk menghubungi kami melalui telepon, email, atau mengisi
+              formulir di samping.
+            </p>
+
+            <div class="flex flex-col gap-y-6">
+              <!-- Phone -->
+              <div class="flex items-start gap-4 p-5 bg-[#EEEDDE] rounded-[10px]">
+                <div class="w-12 h-12 bg-[#FF7527] rounded-full flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-phone text-white text-lg"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-[#203239] text-base mb-1">Telepon</p>
+                  <p class="text-sm text-[#203239]/70">+62 812 3293 6733</p>
+                  <p class="text-sm text-[#203239]/70">+62 821 0000 1234</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4 p-5 bg-[#EEEDDE] rounded-[10px]">
+                <div class="w-12 h-12 bg-[#FF7527] rounded-full flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-envelope text-white text-lg"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-[#203239] text-base mb-1">Email</p>
+                  <p class="text-sm text-[#203239]/70">info@omah.id</p>
+                  <p class="text-sm text-[#203239]/70">support@omah.id</p>
+                </div>
+              </div>
+
+              <!-- Office -->
+              <div class="flex items-start gap-4 p-5 bg-[#EEEDDE] rounded-[10px]">
+                <div class="w-12 h-12 bg-[#FF7527] rounded-full flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-location-dot text-white text-lg"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-[#203239] text-base mb-1">Kantor</p>
+                  <p class="text-sm text-[#203239]/70">
+                    Jl. Sudirman No.123, RT.01/RW.02,<br />
+                    Senayan, Jakarta Pusat, 10270
+                  </p>
+                </div>
+              </div>
+
+              <!-- Social -->
+              <div class="flex gap-4 mt-2">
+                <a href="#" class="w-10 h-10 bg-[#203239] text-white rounded-full flex items-center justify-center hover:bg-[#FF7527] duration-300">
+                  <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-[#203239] text-white rounded-full flex items-center justify-center hover:bg-[#FF7527] duration-300">
+                  <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-[#203239] text-white rounded-full flex items-center justify-center hover:bg-[#FF7527] duration-300">
+                  <i class="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-[#203239] text-white rounded-full flex items-center justify-center hover:bg-[#FF7527] duration-300">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white rounded-[10px] shadow-cShadow p-6 md:p-8">
+            <h2 class="text-xl md:text-2xl font-semibold text-[#203239] mb-6">
+              Kirim Pesan
+            </h2>
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+              <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
+                <div>
+                  <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="name">
+                    Nama Lengkap <span class="text-[#FF7527]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    placeholder="Nama kamu"
+                    class="w-full border border-gray-200 bg-[#EEEDDE]/30 rounded-[8px] p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7527] focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="phone">
+                    No. Telepon
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+62 8xx xxxx xxxx"
+                    class="w-full border border-gray-200 bg-[#EEEDDE]/30 rounded-[8px] p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7527] focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="email">
+                  Email <span class="text-[#FF7527]">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="email@kamu.com"
+                  class="w-full border border-gray-200 bg-[#EEEDDE]/30 rounded-[8px] p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7527] focus:border-transparent"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="subject">
+                  Topik
+                </label>
+                <select
+                  id="subject"
+                  class="w-full border border-gray-200 bg-[#EEEDDE]/30 rounded-[8px] p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7527] focus:border-transparent cursor-pointer text-[#203239]/70"
+                >
+                  <option value="">Pilih topik...</option>
+                  <option value="buy">Pembelian Properti</option>
+                  <option value="kpr">Konsultasi KPR</option>
+                  <option value="invest">Investasi Properti</option>
+                  <option value="other">Lainnya</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label class="block text-sm font-medium text-[#203239]/80 mb-1" for="message">
+                  Pesan <span class="text-[#FF7527]">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  placeholder="Tulis pesanmu di sini..."
+                  class="w-full border border-gray-200 bg-[#EEEDDE]/30 rounded-[8px] p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7527] focus:border-transparent resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[#FF7527] text-white py-4 rounded-[10px] font-semibold hover:bg-[#e66b23] duration-300 cursor-pointer"
+              >
+                <i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pesan
+              </button>
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div
+              id="success-msg"
+              class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-[8px] text-sm text-center"
+            >
+              ✅ Pesan berhasil dikirim! Kami akan menghubungi kamu segera.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <section class="py-7.5 bg-[#203239]">
+      <div class="container px-4 md:px-0 flex md:justify-between justify-center gap-y-5 flex-col md:flex-row items-center">
+        <a href="index.html">
+          <img src="images/flogo.png" alt="Omah footer logo" class="cursor-pointer" />
+        </a>
+        <div class="flex md:gap-x-10 gap-x-6 text-white text-2xl">
+          <a href="#"><i class="fa-brands fa-instagram cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-tumblr cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+        </div>
+        <p class="text-[#EEEDDE]/60 text-sm">© 2026 Omah. All rights reserved.</p>
+      </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function handleResize() {
+        if (window.innerWidth < 768) {
+          menuBtn.style.display = "block";
+        } else {
+          menuBtn.style.display = "none";
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.replace("fa-xmark", "fa-bars");
+        }
+      }
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      menuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          menuBtn.classList.replace("fa-bars", "fa-xmark");
+        } else {
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.replace("fa-xmark", "fa-bars");
+        }
+      });
+
+      // Form submit handler
+      function handleSubmit(e) {
+        e.preventDefault();
+        const form = document.getElementById("contact-form");
+        const successMsg = document.getElementById("success-msg");
+        form.classList.add("opacity-50", "pointer-events-none");
+        successMsg.classList.remove("hidden");
+        setTimeout(() => {
+          form.reset();
+          form.classList.remove("opacity-50", "pointer-events-none");
+          successMsg.classList.add("hidden");
+        }, 4000);
+      }
+    </script>
   </body>
 </html>

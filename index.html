@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,92 +17,120 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <style>
+      /* Mobile menu transition */
+      #mobile-menu {
+        transition: all 0.3s ease;
+      }
+    </style>
   </head>
   <body class="font-pop">
     <!-- Navbar -->
-    <header class="md:py-12.5 py-5 bg-[#EEEDDE]">
-      <div class="flex justify-between container md:px-0 px-4">
-        <img src="images/logo.png" alt="" class="cursor-pointer" />
-        <i class="fa-solid fa-bars md:hidden!"></i>
-        <ul class="hidden md:flex gap-x-25">
-          <li
-            class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"
-          >
-            Home
+    <header class="md:py-12.5 py-5 bg-[#EEEDDE] relative">
+      <div class="flex items-center justify-between container md:px-0 px-4">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
+        </a>
+        <!-- Hamburger icon (mobile only) -->
+        <i
+          id="menu-btn"
+          class="fa-solid fa-bars text-2xl text-[#203239] cursor-pointer"
+          style="display:none"
+        ></i>
+        <!-- Desktop nav -->
+        <ul class="hidden md:flex gap-x-10 items-center">
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="index.html">Home</a>
           </li>
-          <li
-            class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"
-          >
-            About
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="about.html">About</a>
           </li>
-          <li
-            class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"
-          >
-            Properties
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="properties.html">Properties</a>
           </li>
-          <li
-            class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"
-          >
-            Contact
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
+      <!-- Mobile nav dropdown -->
+      <ul
+        id="mobile-menu"
+        class="hidden flex-col bg-[#EEEDDE] px-6 pb-4 gap-y-3 md:hidden"
+      >
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="index.html" class="block text-[#203239] font-medium text-base">Home</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="about.html" class="block text-[#203239] font-medium text-base">About</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="properties.html" class="block text-[#203239] font-medium text-base">Properties</a>
+        </li>
+        <li class="py-2">
+          <a href="contact.html" class="block text-[#203239] font-medium text-base">Contact</a>
+        </li>
+      </ul>
     </header>
     <!-- Navbar -->
+
     <!-- Banner -->
     <section class="bg-[#EEEDDE] md:pb-30 md:pt-23 pt-10 pb-10">
-      <div class="container">
-        <div class="md:flex justify-between">
-          <div class="">
+      <div class="container px-4 md:px-0">
+        <div class="md:flex justify-between items-center">
+          <div class="mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="800">
             <h1
-              class="ml-3 md:ml-0 font-semibold md:text-[56px] text-3xl md:leading-[150%] w-75 md:w-194.25 text-[#203239]"
+              class="font-semibold md:text-[56px] text-[28px] md:leading-[150%] leading-[130%] md:w-[700px] w-full text-[#203239]"
             >
               Temukan Hunian Keluarga Sesuai Keinginanmu
             </h1>
             <p
-              class="ml-3 md:ml-0 font-light md:text-base text-sm w-75 md:w-136 leading-7.5 text-[#203239]/55 pt-6 md:pb-13.75 pb-10"
+              class="font-light md:text-base text-sm md:w-[544px] w-full leading-7.5 text-[#203239]/55 pt-6 md:pb-13.75 pb-8"
             >
               Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
               lokasi yang strategis di kota anda dengan cara yang lebih mudah.
             </p>
-            <div class="md:flex gap-x-4">
+            <div class="flex flex-col md:flex-row gap-3">
               <div
-                class="mb-3 ml-3 md:mb-0 md:py-6 py-3 md:px-5 px-3 md:rounded-[15px] rounded-md bg-white md:flex md:gap-x-3 items-baseline md:w-127.5 w-72.5"
+                class="py-3 md:py-6 px-3 md:px-5 md:rounded-[15px] rounded-md bg-white flex gap-x-3 items-center w-full md:w-auto"
               >
-                <i class="fa-solid fa-location-dot hidden! md:block!"></i>
+                <i class="fa-solid fa-location-dot text-[#203239]/50 hidden md:block"></i>
                 <input
                   type="text"
-                  placeholder="Search location, properties, residental group"
-                  class="outline-none border-none w-full md:w-[89.75px]"
+                  placeholder="Search location, properties, residential group"
+                  class="outline-none border-none w-full text-sm md:text-base"
                 />
               </div>
               <button
-                class="md:py-6 py-3 md:px-10 px-4 ml-3 md:ml-0 rounded-[15px] bg-white text-[#203239]/55 cursor-pointer"
+                class="md:py-6 py-3 md:px-10 px-4 rounded-[15px] bg-white text-[#203239]/55 cursor-pointer hover:bg-[#203239] hover:text-white duration-300 font-medium"
               >
                 Search
               </button>
             </div>
           </div>
-          <div class="">
-            <img src="images/bannerbg.png" alt="" />
+          <div class="mt-8 md:mt-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+            <img src="images/bannerbg.png" alt="Banner" class="max-w-full h-auto" />
           </div>
         </div>
       </div>
     </section>
     <!-- Banner -->
-    <!-- About -->
-    <section class="md:py-25 py-15">
-      <div class="container px-5 md:px-0">
+
+    <!-- About (Steps) -->
+    <section class="md:py-25 py-12">
+      <div class="container px-4 md:px-0">
         <h3
-          class="font-semibold md:w-133.25 w-70 md:text-left text-center md:text-4xl text-[26px] md:leading-[150%] leading-[130%] md:mb-16 mb-10"
+          data-aos="fade-up" data-aos-duration="600"
+          class="font-semibold md:w-[533px] w-full md:text-left text-center md:text-4xl text-[22px] md:leading-[150%] leading-[130%] md:mb-16 mb-8"
         >
           Tahapan Pembelian Properti yang Mudah dan Cepat
         </h3>
-        <div
-          class="flex items-start! justify-between md:flex-row flex-col gap-y-5"
-        >
+        <div class="flex items-start justify-between md:flex-row flex-col gap-y-5">
           <div
-            class="py-5 relative pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"
+            class="py-5 relative pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300 w-full md:w-auto"
           >
             <div class="bFour"></div>
             <div class="flex justify-between">
@@ -112,18 +140,19 @@
               <p class="font-medium text-[#FF7527] text-base">01</p>
             </div>
             <p
-              class="w-58.75 text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-12 pb-5"
+              class="text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-12 pb-5"
             >
               Cari properti yang diinginkan sesuai dengan kriteria anda dan
               keluarga. Cara memilih properti yang bijak dapat anda baca lebih
               lanjut di sini
             </p>
-            <p class="text-[#203239] font-medium text-base">
+            <p class="text-[#203239] font-medium text-base cursor-pointer">
               Baca lebih Lanjut <i class="fa-solid fa-arrow-right pl-3"></i>
             </p>
           </div>
           <div
-            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="150"
+            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300 w-full md:w-auto"
           >
             <div class="bFour"></div>
             <div class="flex justify-between">
@@ -133,17 +162,18 @@
               <p class="font-medium text-[#FF7527] text-base">02</p>
             </div>
             <p
-              class="w-58 text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-19.5 pb-5"
+              class="text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-19.5 pb-5"
             >
               Pembayaran dalam bentuk sejumlah uang sebagai komitmen memesan
               unit properti tertentu.
             </p>
-            <p class="text-[#203239] font-medium text-base">
+            <p class="text-[#203239] font-medium text-base cursor-pointer">
               Baca lebih Lanjut <i class="fa-solid fa-arrow-right pl-3"></i>
             </p>
           </div>
           <div
-            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"
+            class="relative py-5 pl-6 pr-5 border-2 hover:border-[#EEEDDE] border-transparent rounded-[10px] hover:shadow-cShadow duration-300 w-full md:w-auto"
           >
             <div class="bFour"></div>
             <div class="flex justify-between">
@@ -153,12 +183,11 @@
               <p class="font-medium text-[#FF7527] text-base">03</p>
             </div>
             <p
-              class="w-58.75 text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-12 pb-5"
+              class="text-[#203239]/55 leading-7.5 text-base font-light pt-2 md:pb-12 pb-5"
             >
               Pembiayaan KPR untuk pembeli rumah dengan skema pembiayaan jika
               diperlukan dan dilanjutkan proses sertifkasi HGB.
             </p>
-
             <p class="text-[#203239] font-medium text-base cursor-pointer">
               Baca lebih Lanjut <i class="fa-solid fa-arrow-right pl-3"></i>
             </p>
@@ -166,100 +195,96 @@
         </div>
       </div>
     </section>
-    <!-- About -->
+    <!-- About (Steps) -->
+
     <!-- Favorit -->
     <section class="bg-[#EEEDDE] md:py-17 py-10">
-      <div class="container px-5 md:px-0">
-        <p
-          class="text-base text-[#FF7527] md:text-left text-center font-medium"
-        >
+      <div class="container px-4 md:px-0">
+        <p class="text-base text-[#FF7527] md:text-left text-center font-medium">
           Pilihan konsumen
         </p>
         <h3
-          class="text-[34px] text-[#203239] md:text-left text-center font-semibold pt-2 md:mb-16 mb-10"
+          class="text-[34px] text-[#203239] md:text-left text-center font-semibold pt-2 md:mb-16 mb-8"
         >
           Residen Favorit
         </h3>
-        <div class="flex justify-between items-start! flex-col md:flex-row">
-          <div class="">
-            <img src="images/favOne.png" alt="" class="md:w-full w-75" />
+        <div class="flex justify-between items-start flex-col md:flex-row gap-y-6">
+          <div data-aos="fade-right" data-aos-duration="700">
+            <img src="images/favOne.png" alt="Residen Favorit" class="max-w-full h-auto w-full md:w-auto" />
           </div>
-          <div class="">
+          <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
             <h3
-              class="md:text-4xl text-3xl text-[#203239] font-semibold md:w-126.75 w-70 md:text-left text-center md:leading-[150%] leading-[120%] mt-10"
+              class="md:text-4xl text-2xl text-[#203239] font-semibold md:w-[507px] w-full md:text-left text-center md:leading-[150%] leading-[130%] mt-6 md:mt-10"
             >
               Bangunan yang dirancang oleh Aristektur Handal
             </h3>
             <p
-              class="md:text-base text-sm md:text-left text-center font-light text-[#203239] md:w-142.5 w-70 leading-7.5 mt-6 mb-12"
+              class="md:text-base text-sm md:text-left text-center font-light text-[#203239] md:w-[570px] w-full leading-7.5 mt-6 mb-10"
             >
-              Tanpa diragukan, properti yang disediakan dalam webiste kami
+              Tanpa diragukan, properti yang disediakan dalam website kami
               merupakan hasil kerjasama secara profesional dengan para
               Arsitektur ternama dan Developer yang terpercaya.
             </p>
-            <div class="flex gap-x-12 gap-y-5 flex-col md:flex-row">
-              <button
-                class="py-4 px-10 border-2 border-[#203239] rounded-[10px] text-base text-[#203239] font-semibold cursor-pointer hover:text-white hover:bg-[#203239] duration-300"
-              >
-                <i class="fa-solid fa-phone mr-3"></i>Hubungi Kami
-              </button>
-              <button
-                class="py-4 px-10 border-2 border-[#203239] rounded-[10px] text-base font-semibold cursor-pointer text-white bg-[#203239] duration-300"
-              >
-                Explore lebih banyak
-              </button>
+            <div class="flex gap-x-4 gap-y-4 flex-col md:flex-row">
+              <a href="contact.html">
+                <button
+                  class="w-full md:w-auto py-4 px-8 border-2 border-[#203239] rounded-[10px] text-base text-[#203239] font-semibold cursor-pointer hover:text-white hover:bg-[#203239] duration-300"
+                >
+                  <i class="fa-solid fa-phone mr-3"></i>Hubungi Kami
+                </button>
+              </a>
+              <a href="properties.html">
+                <button
+                  class="w-full md:w-auto py-4 px-8 border-2 border-[#203239] rounded-[10px] text-base font-semibold cursor-pointer text-white bg-[#203239] duration-300"
+                >
+                  Explore lebih banyak
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Favorit -->
-    <!-- Auditor -->
+
+    <!-- Residen Berbagai Kota -->
     <section class="md:py-17 py-10">
-      <div class="container px-5 md:px-0">
-        <p
-          class="text-base text-[#FF7527] font-medium text-center md:text-left"
-        >
+      <div class="container px-4 md:px-0">
+        <p class="text-base text-[#FF7527] font-medium text-center md:text-left">
           Pilihan Auditor
         </p>
         <h3
-          class="text-4xl text-[#203239] font-semibold pt-2 md:mb-16 mb-10 text-center md:text-left"
+          class="text-4xl text-[#203239] font-semibold pt-2 md:mb-16 mb-8 text-center md:text-left"
         >
           Residen Berbagai Kota
         </h3>
-        <div class="flex gap-6 items-start! md:flex-row flex-col">
-          <div class="">
-            <img src="images/image 5.jpg" alt="" class="md:w-full w-75" />
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+            <img src="images/image 5.jpg" alt="Magnolia Surabaya" class="w-full h-auto object-cover rounded-md" />
             <h5 class="text-2xl text-[#203239] font-medium pt-4 pb-2">
               Magnolia Surabaya
             </h5>
-            <p
-              class="text-base text-[#203239] leading-7.5 font-light md:w-89 w-70"
-            >
+            <p class="text-base text-[#203239] leading-7.5 font-light">
               Jl. Gatot Subroto No.KM.6,8, RT.001/RW.008, Jatake, Kec.
               Jatiuwung, Kota Tangerang, Banten 15136
             </p>
           </div>
-          <div class="">
-            <img src="images/image 6.png" alt="" class="md:w-full w-75" />
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+            <img src="images/image 6.png" alt="Pinang Residences" class="w-full h-auto object-cover rounded-md" />
             <h5 class="text-2xl text-[#203239] font-medium pt-4 pb-2">
               Pinang Residences
             </h5>
-            <p
-              class="text-base text-[#203239] leading-7.5 font-light md:w-89 w-70"
-            >
+            <p class="text-base text-[#203239] leading-7.5 font-light">
               Jl. Deplu Raya No.16 RT.5, RW.003 Bintaro, Pesanggrahan, Jakarta
               Selatan 12330
             </p>
           </div>
-          <div class="">
-            <img src="images/image 7.jpg" alt="" class="md:w-full w-75" />
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <img src="images/image 7.jpg" alt="South Grove" class="w-full h-auto object-cover rounded-md" />
             <h5 class="text-2xl text-[#203239] font-medium pt-4 pb-2">
               South Grove
             </h5>
-            <p
-              class="text-base text-[#203239] leading-7.5 font-light md:w-89 w-70"
-            >
+            <p class="text-base text-[#203239] leading-7.5 font-light">
               1 No.1, RT.1/RW.1, Lb. Bulus, Kec. Cilandak, Kota Jakarta Selatan,
               Daerah Khusus Ibukota Jakarta 12440
             </p>
@@ -267,80 +292,119 @@
         </div>
       </div>
     </section>
-    <!-- Auditor -->
+    <!-- Residen Berbagai Kota -->
+
     <!-- Footer -->
     <footer class="bg-[#EEEDDE] py-12">
-      <div class="container">
-        <div
-          class="flex md:justify-between justify-center md:flex-row flex-col"
-        >
-          <div class="">
-            <h3 class="text-4xl text-[#203239] font-semibold md:mb-18.5">
+      <div class="container px-4 md:px-0">
+        <div class="flex md:justify-between justify-center md:flex-row flex-col gap-y-10">
+          <div data-aos="fade-right" data-aos-duration="600">
+            <h3 class="text-3xl md:text-4xl text-[#203239] font-semibold mb-6 md:mb-18.5">
               Hubungi Kami
             </h3>
-            <div class="flex gap-x-6 md:flex-row flex-col gap-y-5 my-5">
-              <div class="px-10 pt-6 pb-4 text-center bg-white rounded-[10px]">
-                <div class="flex gap-x-6 mb-7">
+            <div class="flex gap-x-4 gap-y-4 flex-col md:flex-row">
+              <div class="px-6 md:px-10 pt-6 pb-4 text-center bg-white rounded-[10px]">
+                <div class="flex gap-x-4 mb-7 items-center">
                   <i class="fa-solid fa-phone text-[#203239] text-3xl"></i>
-                  <div class="">
-                    <p
-                      class="text-left pl-2 text-base text-[#203239] font-medium"
-                    >
-                      Call
-                    </p>
+                  <div>
+                    <p class="text-left text-base text-[#203239] font-medium">Call</p>
                     <p class="text-base text-[#203239]">+6281232936733</p>
                   </div>
                 </div>
                 <button
-                  class="text-base font-semibold cursor-pointer text-white py-2.5 px-4.5 rounded-[5px] bg-[#203239]"
+                  class="text-base font-semibold cursor-pointer text-white py-2.5 px-6 rounded-[5px] bg-[#203239] hover:bg-[#FF7527] duration-300"
                 >
                   Call Now
                 </button>
               </div>
-              <div class="px-10 pt-6 pb-4 text-center bg-white rounded-[10px]">
-                <div class="flex gap-x-6 mb-7">
-                  <i class="fa-solid fa-phone text-[#203239] text-3xl"></i>
-                  <div class="">
-                    <p
-                      class="text-left pl-2 text-base text-[#203239] font-medium"
-                    >
-                      Call
-                    </p>
-                    <p class="text-base text-[#203239]">+6281232936733</p>
+              <div class="px-6 md:px-10 pt-6 pb-4 text-center bg-white rounded-[10px]">
+                <div class="flex gap-x-4 mb-7 items-center">
+                  <i class="fa-solid fa-envelope text-[#203239] text-3xl"></i>
+                  <div>
+                    <p class="text-left text-base text-[#203239] font-medium">Email</p>
+                    <p class="text-base text-[#203239]">info@omah.id</p>
                   </div>
                 </div>
-                <button
-                  class="text-base font-semibold cursor-pointer text-white py-2.5 px-4.5 rounded-[5px] bg-[#203239]"
-                >
-                  Call Now
-                </button>
+                <a href="contact.html">
+                  <button
+                    class="text-base font-semibold cursor-pointer text-white py-2.5 px-6 rounded-[5px] bg-[#203239] hover:bg-[#FF7527] duration-300"
+                  >
+                    Email Us
+                  </button>
+                </a>
               </div>
             </div>
           </div>
-          <div class="">
-            <h3 class="text-4xl text-[#203239] font-semibold md:mb-17.5 mb-7">
+          <div data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+            <h3 class="text-3xl md:text-4xl text-[#203239] font-semibold mb-6 md:mb-17.5">
               Penghargaan
             </h3>
-            <img src="images/footer.png" alt="" />
+            <img src="images/footer.png" alt="Penghargaan" class="max-w-full h-auto" />
           </div>
         </div>
       </div>
     </footer>
     <!-- Footer -->
-    <!-- Bottom -->
+
+    <!-- Bottom Bar -->
     <section class="py-7.5 bg-[#203239]">
       <div
-        class="container flex md:justify-between justify-normal gap-y-7 flex-col md:flex-row"
+        class="container px-4 md:px-0 flex md:justify-between justify-center gap-y-5 flex-col md:flex-row items-center"
       >
-        <img src="images/flogo.png" alt="" class="cursor-pointer" />
-        <div class="flex md:gap-x-16 gap-x-8 text-white text-2xl">
-          <i class="fa-brands fa-instagram cursor-pointer"></i>
-          <i class="fa-brands fa-facebook-f cursor-pointer"></i>
-          <i class="fa-brands fa-tumblr cursor-pointer"></i>
-          <i class="fa-brands fa-linkedin-in cursor-pointer"></i>
+        <a href="index.html">
+          <img src="images/flogo.png" alt="Omah footer logo" class="cursor-pointer" />
+        </a>
+        <div class="flex md:gap-x-10 gap-x-6 text-white text-2xl">
+          <a href="#"><i class="fa-brands fa-instagram cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-tumblr cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
         </div>
+        <p class="text-[#EEEDDE]/60 text-sm">© 2026 Omah. All rights reserved.</p>
       </div>
     </section>
-    <!-- Bottom -->
+    <!-- Bottom Bar -->
+
+    <!-- Mobile menu script -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Show hamburger only on mobile
+      function handleResize() {
+        if (window.innerWidth < 768) {
+          menuBtn.style.display = "block";
+        } else {
+          menuBtn.style.display = "none";
+          // close mobile menu if open when resizing to desktop
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.remove("fa-xmark");
+          menuBtn.classList.add("fa-bars");
+        }
+      }
+
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      menuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          menuBtn.classList.remove("fa-bars");
+          menuBtn.classList.add("fa-xmark");
+        } else {
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.remove("fa-xmark");
+          menuBtn.classList.add("fa-bars");
+        }
+      });
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
   </body>
 </html>

@@ -1,78 +1,235 @@
 <!doctype html>
-<html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Omah</title>
+    <title>About – OMAH</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <!-- Tailwind CSS compiled file -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./src/output.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
-  <body class="font-pop bg-[#EEEDDE]">
-    <!-- Navbar (reuse same structure as index) -->
-    <header class="md:py-12.5 py-5 bg-[#EEEDDE]">
-      <div class="flex justify-between container md:px-0 px-4">
-        <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
-        <i class="fa-solid fa-bars md:hidden"></i>
-        <ul class="hidden md:flex gap-x-8">
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="index.html" class="block py-2">Home</a></li>
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="about.html" class="block py-2">About</a></li>
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="#" class="block py-2">Properties</a></li>
-          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold"><a href="#" class="block py-2">Contact</a></li>
+  <body class="font-pop bg-white">
+    <!-- Navbar -->
+    <header class="md:py-12.5 py-5 bg-[#EEEDDE] relative">
+      <div class="flex items-center justify-between container md:px-0 px-4">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Omah Logo" class="cursor-pointer" />
+        </a>
+        <i id="menu-btn" class="fa-solid fa-bars text-2xl text-[#203239] cursor-pointer" style="display:none"></i>
+        <ul class="hidden md:flex gap-x-10 items-center">
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="border-b-4 border-[#F6762E] cursor-pointer text-base font-semibold">
+            <a href="about.html">About</a>
+          </li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="properties.html">Properties</a>
+          </li>
+          <li class="hover:border-b-4 duration-300 hover:border-[#F6762E] border-b-4 border-transparent cursor-pointer text-base hover:font-semibold">
+            <a href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
+      <!-- Mobile nav dropdown -->
+      <ul id="mobile-menu" class="hidden flex-col bg-[#EEEDDE] px-6 pb-4 gap-y-3 md:hidden">
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="index.html" class="block text-[#203239] font-medium text-base">Home</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="about.html" class="block text-[#FF7527] font-semibold text-base">About</a>
+        </li>
+        <li class="border-b border-[#203239]/20 py-2">
+          <a href="properties.html" class="block text-[#203239] font-medium text-base">Properties</a>
+        </li>
+        <li class="py-2">
+          <a href="contact.html" class="block text-[#203239] font-medium text-base">Contact</a>
+        </li>
+      </ul>
     </header>
+    <!-- Navbar -->
 
-    <!-- About Section -->
-    <section class="py-12 md:py-20 container mx-auto">
-      <h1 class="text-4xl md:text-5xl font-semibold text-center text-[#203239] mb-8">About Omah</h1>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <p class="text-base md:text-lg text-[#203239]/80 leading-relaxed mb-4">
-            Omah is a modern real‑estate platform that helps families find their perfect home. We combine a clean, responsive design with powerful search tools, allowing users to filter properties by location, price range, and amenities.
-          </p>
-          <p class="text-base md:text-lg text-[#203239]/80 leading-relaxed">
-            Our mission is to simplify the property‑buying journey, offering transparent information, easy navigation, and a smooth booking experience. Whether you are a first‑time buyer or looking to upgrade, Omah provides curated listings from trusted developers.
-          </p>
-        </div>
-        <div class="flex justify-center">
-          <img src="images/bannerbg.png" alt="Omah banner" class="max-w-full h-auto rounded-lg shadow-cShadow" />
+    <!-- Page Hero -->
+    <section class="bg-[#EEEDDE] py-14 md:py-20">
+      <div class="container px-4 md:px-0 text-center">
+        <p class="text-base text-[#FF7527] font-medium mb-2">Tentang Kami</p>
+        <h1 data-aos="fade-up" data-aos-duration="600" class="font-semibold text-3xl md:text-5xl text-[#203239] leading-[130%] md:leading-[150%]">
+          Mengenal Lebih Dekat OMAH
+        </h1>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-12 md:py-20">
+      <div class="container px-4 md:px-0">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div data-aos="fade-right" data-aos-duration="700">
+            <p class="text-base text-[#FF7527] font-medium mb-2">Visi Kami</p>
+            <h2 class="text-2xl md:text-4xl font-semibold text-[#203239] mb-6 leading-[140%]">
+              Menjadi Platform Properti Terpercaya di Indonesia
+            </h2>
+            <p class="text-sm md:text-base text-[#203239]/70 leading-7.5 mb-4">
+              Omah hadir untuk mempermudah proses pencarian dan pembelian
+              properti keluarga. Kami menghubungkan calon pembeli dengan
+              developer terpercaya, menghadirkan informasi yang transparan dan
+              proses yang mudah.
+            </p>
+            <p class="text-sm md:text-base text-[#203239]/70 leading-7.5">
+              Dengan teknologi modern dan jaringan developer ternama, kami
+              memastikan setiap keluarga bisa mendapatkan hunian impian mereka
+              dengan cara yang lebih cepat, aman, dan nyaman.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+            <img
+              src="images/bannerbg.png"
+              alt="About Omah"
+              class="max-w-full h-auto rounded-xl shadow-cShadow"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Team / Values (optional) -->
+    <!-- Values -->
     <section class="bg-[#EEEDDE] py-12 md:py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl md:text-4xl font-semibold text-center text-[#203239] mb-10">Our Values</h2>
-        <div class="grid md:grid-cols-3 gap-6 text-center">
-          <div class="p-6 bg-white rounded-lg shadow-cShadow">
-            <i class="fa-solid fa-user-check text-4xl text-[#FF7527] mb-4"></i>
-            <h3 class="font-medium text-[#203239] mb-2">Transparency</h3>
-            <p class="text-sm text-[#203239]/70">Clear pricing and property details for confident decisions.</p>
+      <div class="container px-4 md:px-0">
+        <p class="text-base text-[#FF7527] font-medium text-center mb-2">Nilai Kami</p>
+        <h2 class="text-2xl md:text-4xl font-semibold text-center text-[#203239] mb-10 md:mb-16">
+          Mengapa Memilih OMAH?
+        </h2>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="0" class="p-6 bg-white rounded-[10px] shadow-cShadow hover:scale-105 duration-300">
+            <i class="fa-solid fa-user-check text-4xl text-[#FF7527] mb-4 block"></i>
+            <h3 class="font-semibold text-[#203239] text-lg mb-2">Transparansi</h3>
+            <p class="text-sm text-[#203239]/70 leading-7">
+              Harga dan detail properti yang jelas untuk keputusan yang lebih
+              percaya diri.
+            </p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow-cShadow">
-            <i class="fa-solid fa-heart text-4xl text-[#FF7527] mb-4"></i>
-            <h3 class="font-medium text-[#203239] mb-2">Customer Focus</h3>
-            <p class="text-sm text-[#203239]/70">Tailored recommendations to match each family’s needs.</p>
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="150" class="p-6 bg-white rounded-[10px] shadow-cShadow hover:scale-105 duration-300">
+            <i class="fa-solid fa-heart text-4xl text-[#FF7527] mb-4 block"></i>
+            <h3 class="font-semibold text-[#203239] text-lg mb-2">Fokus Pelanggan</h3>
+            <p class="text-sm text-[#203239]/70 leading-7">
+              Rekomendasi yang disesuaikan untuk memenuhi kebutuhan setiap
+              keluarga.
+            </p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow-cShadow">
-            <i class="fa-solid fa-shield-halved text-4xl text-[#FF7527] mb-4"></i>
-            <h3 class="font-medium text-[#203239] mb-2">Trust & Safety</h3>
-            <p class="text-sm text-[#203239]/70">Verified listings and secure booking processes.</p>
+          <div class="p-6 bg-white rounded-[10px] shadow-cShadow hover:scale-105 duration-300">
+            <i class="fa-solid fa-shield-halved text-4xl text-[#FF7527] mb-4 block"></i>
+            <h3 class="font-semibold text-[#203239] text-lg mb-2">Kepercayaan & Keamanan</h3>
+            <p class="text-sm text-[#203239]/70 leading-7">
+              Listing yang terverifikasi dan proses pemesanan yang aman.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer (reuse simple version) -->
-    <footer class="py-8 bg-[#203239] text-white text-center">
-      <p class="text-sm">© 2026 Omah. All rights reserved.</p>
-    </footer>
+    <!-- Team Stats -->
+    <section class="py-12 md:py-20">
+      <div class="container px-4 md:px-0">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-4xl md:text-5xl font-bold text-[#FF7527]">500+</p>
+            <p class="text-sm md:text-base text-[#203239]/70 mt-2">Properti Terdaftar</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold text-[#FF7527]">12+</p>
+            <p class="text-sm md:text-base text-[#203239]/70 mt-2">Kota Jangkauan</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold text-[#FF7527]">2K+</p>
+            <p class="text-sm md:text-base text-[#203239]/70 mt-2">Keluarga Puas</p>
+          </div>
+          <div>
+            <p class="text-4xl md:text-5xl font-bold text-[#FF7527]">50+</p>
+            <p class="text-sm md:text-base text-[#203239]/70 mt-2">Developer Mitra</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[#203239] py-12 md:py-16">
+      <div class="container px-4 md:px-0 text-center">
+        <h2 class="text-2xl md:text-4xl font-semibold text-white mb-4">
+          Siap Menemukan Rumah Impianmu?
+        </h2>
+        <p class="text-sm md:text-base text-white/70 mb-8">
+          Jelajahi ratusan properti pilihan kami dan mulai perjalananmu hari ini.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="properties.html">
+            <button class="w-full md:w-auto py-4 px-10 bg-[#FF7527] text-white rounded-[10px] font-semibold hover:bg-[#e66b23] duration-300">
+              Lihat Properti
+            </button>
+          </a>
+          <a href="contact.html">
+            <button class="w-full md:w-auto py-4 px-10 border-2 border-white text-white rounded-[10px] font-semibold hover:bg-white hover:text-[#203239] duration-300">
+              Hubungi Kami
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <section class="py-7.5 bg-[#203239] border-t border-white/10">
+      <div class="container px-4 md:px-0 flex md:justify-between justify-center gap-y-5 flex-col md:flex-row items-center">
+        <a href="index.html">
+          <img src="images/flogo.png" alt="Omah footer logo" class="cursor-pointer" />
+        </a>
+        <div class="flex md:gap-x-10 gap-x-6 text-white text-2xl">
+          <a href="#"><i class="fa-brands fa-instagram cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-tumblr cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in cursor-pointer hover:text-[#FF7527] duration-300"></i></a>
+        </div>
+        <p class="text-[#EEEDDE]/60 text-sm">© 2026 Omah. All rights reserved.</p>
+      </div>
+    </section>
+
+    <!-- Mobile menu script -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function handleResize() {
+        if (window.innerWidth < 768) {
+          menuBtn.style.display = "block";
+        } else {
+          menuBtn.style.display = "none";
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.replace("fa-xmark", "fa-bars");
+        }
+      }
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      menuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          menuBtn.classList.replace("fa-bars", "fa-xmark");
+        } else {
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+          menuBtn.classList.replace("fa-xmark", "fa-bars");
+        }
+      });
+    </script>
   </body>
 </html>

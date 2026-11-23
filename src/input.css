@@ -9,9 +9,7 @@
   @apply max-w-[1170px] mx-auto;
 }
 
-.flex {
-  @apply flex items-center;
-}
+/* NOTE: removed global .flex override — it conflicts with Tailwind's hidden/block utilities */
 
 .bFour {
   @apply w-2 h-7.5 bg-[#FF7527] rounded-[5px] absolute top-[15px] -left-1;
